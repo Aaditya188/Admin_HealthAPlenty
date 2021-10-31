@@ -267,6 +267,20 @@
         </script>
 
         <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBW10e3UmYzoe_eUDP-HB_0TgUVk7rCDQM",
+            authDomain: "adminhealthaplenty.firebaseapp.com",
+            databaseURL: "https://adminhealthaplenty-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "adminhealthaplenty",
+            storageBucket: "adminhealthaplenty.appspot.com",
+            messagingSenderId: "612885744470",
+            appId: "1:612885744470:web:2057f17c2590637fca64f7"
+        };
+            firebase.initializeApp(firebaseConfig);
+        </script>
+
+
+        <script>
         function showContent(){
             var temp1,copyHTML1,td1;
             firebase.database().ref('Appointments/').on('value', function(snapshot){snapshot.forEach(function(childNodes){

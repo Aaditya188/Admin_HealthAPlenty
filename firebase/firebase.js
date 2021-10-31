@@ -789,10 +789,10 @@ function fetchpat(){
 	userName = pa_email.substring(0, pa_email.lastIndexOf("@"));
 
 	firebase.database().ref('Patients/'+userName).on('value',function(snapshot){
-		document.getElementById("pa_name").value = snapshot.val().Name;
-		document.getElementById("pa_phone").value = snapshot.val().Phone;
-		document.getElementById("pa_dis").value = snapshot.val().Disease;
-		document.getElementById("pa_appdate").value = snapshot.val().Appdate;
+		document.getElementById("pa_name").value = snapshot.val().name;
+		document.getElementById("pa_phone").value = snapshot.val().phone;
+		document.getElementById("pa_dis").value = snapshot.val().disease;
+		document.getElementById("pa_appdate").value = snapshot.val().date;
 	});
 
 }
